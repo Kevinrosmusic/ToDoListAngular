@@ -1,27 +1,52 @@
 # ToDoListAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.
 
-## Development server
+## This project was built with:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ - Angular
 
-## Code scaffolding
+ - SASS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ - Typescript
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To get a local copy up and running follow these simple example steps:
 
-## Running unit tests
+- On the project, GitHub page, navigate to the  [main page of the repository](https://github.com/Kevinrosmusic/ToDoListAngular)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Click on a button named `code`
 
-## Running end-to-end tests
+- Copy the project URL as displayed on HTTPS tab
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- If you're running on Windows Operating System, open your command prompt. On Linux, Open your terminal
 
-## Further help
+- Change the current working directory to the location where you want the cloned directory to be made. Leave it as it is if the current location is where you want the project to be
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Type `git clone`, and then paste the URL you copied in Step 3.<br>
+
+  `$ git clone https://github.com/Kevinrosmusic/ToDoListAngular` <em>Press Enter key</em><br>
+
+- Your local copy will be created
+
+- Please note that you must have Git installed on your PC, this can be done [here](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+
+- After you get the project aiming to the desired directory, you need now to install dependencies by running: `npm install` 
+  
+- Then run `ng-serve`
+
+## Backend
+
+- Create a database in MySQL named todolist
+
+- Import the todolist.sql file that is inside the backend folder
+
+- Change backend .env file credentials
+
+- Run `npm run dev` to start the backend
+
+##
+## Authors
+
+👤 **Kevin Palomino**
