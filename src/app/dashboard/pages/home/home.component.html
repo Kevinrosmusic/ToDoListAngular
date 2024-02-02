@@ -1,0 +1,46 @@
+<div class="main">
+  <app-sidebar (activatedEvent)="isChangeActive($event)"></app-sidebar>
+  <app-header></app-header>
+  <main style="flex-grow: 1; padding: 30px; margin-top: 70px">
+    <app-nothing-selected *ngIf="!active"></app-nothing-selected>
+    <app-to-do-list *ngIf="active" [listID]="id"></app-to-do-list>
+    <a class="btn-flotante" (click)="open(content)"
+      ><i class="fa-solid fa-plus"></i
+    ></a>
+  </main>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Create new To Do List</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="form" (ngSubmit)="onSubmitToDoList()">
+        <div class="form-group mt-3">
+          <label for="title">Titulo To Do List</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            formControlName="title"
+            autocomplete="off"
+          />
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="btn btn-outline-dark"
+            [disabled]="form.invalid"
+            (click)="modal.close('Save click')"
+          >
+            Guardar
+          </button>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+</div>

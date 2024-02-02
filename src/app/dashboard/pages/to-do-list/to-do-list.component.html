@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 d-flex justify-content-between">
+      <div>
+        <h5>{{ listInfo.name }}</h5>
+      </div>
+      <div class="d-flex">
+        <button
+          style="
+            border-radius: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            margin-bottom: 10px;
+          "
+        >
+          <i
+            class="fa-solid fa-trash"
+            (click)="deleteToDoList(listInfo.id)"
+          ></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-8 mt-3" *ngIf="listInfo.tasks.length === 0">
+      <div class="alert alert-primary" role="alert">
+        ¡Aún no tienes tareas creadas!
+      </div>
+    </div>
+
+    <div class="col-8 mt-3">
+      <div class="card mb-3" *ngFor="let task of listInfo.tasks">
+        <div class="d-flex align-items-center" style="padding: 30px">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="{{ task.done }}"
+              id="flexCheckDefault"
+              [checked]="task.done"
+              (click)="updateTask(task.id)"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              {{ task.title }}
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card" style="padding: 30px">
+        <p>Nueva tarea</p>
+        <form [formGroup]="form" (ngSubmit)="createTask()">
+          <div class="form-group mt-3">
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              formControlName="title"
+              autocomplete="off"
+            />
+          </div>
+          <div class="mt-3 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary btn-sm">
+              Agregar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

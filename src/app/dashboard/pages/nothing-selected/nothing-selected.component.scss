@@ -1,0 +1,18 @@
+.nothingSelected {
+  background-color: #1976d2;
+  border-radius: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  .nothingSelected__icon {
+    font-size: 100px;
+    color: #d3d3d3;
+  }
+  .nothingSelected__text {
+    font-size: 20px;
+    color: #d3d3d3;
+  }
+}

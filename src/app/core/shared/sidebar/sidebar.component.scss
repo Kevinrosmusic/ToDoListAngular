@@ -1,0 +1,22 @@
+nav {
+  background-color: black;
+  width: 280px;
+  flex-shrink: 0;
+  height: 100vh;
+  padding: 20px;
+
+  .sidebar-header {
+    color: white;
+  }
+
+  hr {
+    color: white;
+  }
+
+  .img-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+  }
+}

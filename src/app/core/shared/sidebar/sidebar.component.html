@@ -1,0 +1,21 @@
+<nav>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3>{{ name }}</h3>
+    </div>
+    <hr />
+
+    <ul class="list-unstyled components">
+      <li *ngFor="let ToDoList of ToDoLists">
+        <div class="img-container mb-3" (click)="activateList(ToDoList.id)">
+          <div class="card">
+            <div class="card-body">
+              <i class="fa-solid fa-circle-info"></i>
+              <span style="margin-left: 10px">{{ ToDoList.name }}</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
